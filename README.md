@@ -1,2 +1,2 @@
-# IBM-example
-this is to know more about github
+# my-files
+This repo contains some of my configuration files
