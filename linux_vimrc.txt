@@ -2,13 +2,15 @@
 
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
-Plug 'scrooloose/syntastic'
+Plug 'tomasiser/vim-code-dark'
+Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
+"Plug 'vim-airline/vim-airline'
 call plug#end()
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -16,13 +18,16 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 set ttimeout ttimeoutlen=50
+"set clipboard=unnamedplus
 
 set nocompatible
 
 "for gruvbox
+colorscheme gruvbox
 let g:gruvbox_number_column='bg1'
-:colorscheme gruvbox
-:set background=dark
+let g:gruvbox_contrast_dark='medium'
+set background=dark
+set termguicolors
 
 " Turn on syntax highlighting.
 syntax on
@@ -34,9 +39,12 @@ set nu
 set nowrap
 set noswapfile
 set nobackup
-set undodir=/.vim/undodir
 set undofile
+"set cursorline
+highlight Comment cterm=italic gui=italic
+
 " Disable the default Vim startup message.
+
 set shortmess+=I
 
 " Show line numbers.
@@ -58,6 +66,7 @@ set laststatus=2
 
 " shows status of cursor
 set ruler
+set guifont=Monospace\ 14
 
 " The backspace key has slightly unintuitive behavior by default. For example,
 " by default, you can't backspace before the insertion point set with 'i'.
