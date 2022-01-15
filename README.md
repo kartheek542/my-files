@@ -1,2 +1,2 @@
 # my-files
-This repo contains some of my configuration files
+This repo contains scripts for automating some tasks in linux
