@@ -99,7 +99,7 @@ set mouse+=a
 
 let mapleader=" "
 
-function! ChangeClass()
+function! CopyFile()
     let ftype = expand('%:e')
     if(ftype == 'java')
         normal! mmgg
@@ -123,4 +123,4 @@ inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 "for contests
-nnoremap <leader>cp :call ChangeClass()<CR>
+nnoremap <leader>cp :call CopyFile()<CR>
