@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "performing general update"
-#sudo apt update
-#sudo apt upgrade
+sudo apt update
+sudo apt upgrade
 
 echo "installing git"
 sudo apt install git
