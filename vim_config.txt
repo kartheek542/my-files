@@ -96,13 +96,20 @@ set mouse+=a
 " bad habit. The former is enforceable through a .vimrc, while we don't know
 " how to prevent the latter.
 " Do this in normal mode...
+
 let mapleader=" "
 
 function! ChangeClass()
-    normal! mmgg
-    silent /public class
-    silent :s/^\(public class\) \(.*\) \(.*\)$/\1 Main \3/
-    normal! gg"+yGu`m
+    let ftype = expand('%:e')
+    if(ftype == 'java')
+        normal! mmgg
+        silent /public class
+        silent :s/^\(public class\) \(.*\) \(.*\)$/\1 Main \3/
+        normal! gg"+yGu`m
+    else
+        normal! mmgg
+        normal! "+yG`m
+    endif
 endfunction
 
 nnoremap <Left>  :echoe "Use h"<CR>
@@ -117,4 +124,3 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 "for contests
 nnoremap <leader>cp :call ChangeClass()<CR>
-
