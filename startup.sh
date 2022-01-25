@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ~
 echo "performing general update"
 sudo apt update
 sudo apt upgrade
