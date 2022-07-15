@@ -11,6 +11,7 @@ echo "performing general update"
 sleep 1
 sudo apt update
 echo "yes" | sudo apt upgrade
+sudo apt install snapd
 
 
 
@@ -224,3 +225,12 @@ sleep 1
     *)
         echo "not installing Postman";;
 esac
+
+
+
+
+
+# Setting up jrun
+sudo chmod +x jrun.sh
+cd /bin/
+sudo ln -s ~/scripts/jrun jrun
