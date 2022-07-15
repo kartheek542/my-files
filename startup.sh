@@ -160,6 +160,67 @@ esac
 
 
 
-# installing basic tools
-echo "installing basic tools"
-sudo apt install figlet
+# VLC media player
+echo -n "do you want to install vlc media player [y/n]: "
+read ch
+case $ch in
+    "y" | "Y")
+        sudo apt install -y vlc
+        echo "vlc is successfully installed"
+sleep 1
+        ;;
+    *)
+        echo "not installing vlc";;
+esac
+
+
+
+
+# Team Viewer
+echo -n "do you want to install team viewer [y/n]: "
+read ch
+case $ch in
+    "y" | "Y")
+        wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+        sudo apt install -y ./teamviewer_amd64.deb
+        echo "Team viewer is successfully installed"
+sleep 1
+        ;;
+    *)
+        echo "not installing team viewer";;
+esac
+
+
+
+
+
+# Miro
+echo -n "do you want to install miro [y/n]: "
+read ch
+case $ch in
+    "y" | "Y")
+        sudo snap install miro
+        echo "Miro is successfully installed"
+sleep 1
+        ;;
+    *)
+        echo "not installing miro";;
+esac
+
+
+
+
+
+
+# Postman
+echo -n "do you want to install Postman [y/n]: "
+read ch
+case $ch in
+    "y" | "Y")
+        sudo snap install Postman
+        echo "Postman is successfully installed"
+sleep 1
+        ;;
+    *)
+        echo "not installing Postman";;
+esac

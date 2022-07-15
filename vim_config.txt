@@ -102,6 +102,12 @@ let g:lightline = {
 " Do this in normal mode...
 
 
+
+"let g:coc_global_extensions = [
+"  \ 'coc-tsserver'
+"  \ ]
+
+
 let mapleader=" "
 
 function! CopyFile()
